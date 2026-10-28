@@ -146,7 +146,11 @@ table.vs{width:100%;border-collapse:separate;border-spacing:0;margin-top:44px;ba
 .fact b{display:block;font-size:38px;line-height:1.2;background:var(--text-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .fact span{color:var(--muted);font-size:16px}
 .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
-.review{border:2px dashed #e0b400;background:#fffbea;border-radius:var(--radius);padding:22px;color:#5c4a00;font-size:16px}
+.review{background:var(--card);border:1px solid var(--card-line);border-radius:var(--radius);padding:24px;margin:0;display:flex;flex-direction:column;gap:14px}
+.review p{margin:0;font-size:16px;line-height:1.75;color:var(--ink)}
+.review p::before{content:"\201C";color:#ffc94d;font-size:28px;line-height:0;vertical-align:-8px;margin-right:4px}
+.review figcaption{margin-top:auto;color:var(--muted);font-size:14px}
+.review-note{margin-top:16px;color:var(--muted);font-size:14px;text-align:center}
 
 /* 7. 제안 */
 .offer{max-width:680px;margin:32px auto 0;border-radius:var(--radius);padding:34px;text-align:center;color:var(--ink);
@@ -351,12 +355,18 @@ footer a{color:var(--ink)}
       <div class="fact"><b>7곳</b><span>함께 나가는 SNS</span></div>
       <div class="fact"><b>3종</b><span>고를 수 있는 AI</span></div>
     </div>
-    <!-- 🔒 후기는 실제로 받은 글을, 본인 동의를 받고, 고치지 말고 넣는다. 지어낸 후기는 표시광고법 위반 -->
+    <!-- 🔒 후기 출처: 무료 특강 단톡방에 수강생이 직접 남긴 글(2026-06-11·12, 10-03). 낱말은 고치지 않고 줄인 곳만 … 로 표시.
+         이름은 성 또는 닉네임 첫 글자만, 이메일·전화번호는 뺐다. 후기 작성자에게 복습 자료(후기 선물)를 드렸으므로 아래에 밝힌다.
+         게시 동의는 별님이 단톡방 공지 등으로 받아 둘 것. 지어낸 후기·수익 약속 문구는 넣지 않는다(표시광고법). -->
     <div class="reviews">
-      <div class="review">[실제 수강생 후기 1 — 받은 그대로, 동의받고 넣기]</div>
-      <div class="review">[실제 수강생 후기 2]</div>
-      <div class="review">[실제 수강생 후기 3]</div>
+      <figure class="review"><p>막상 유튜브보면 어려워서 진짜 이건 못하는건가 싶었는데 오늘 강사님 통해서 어렵지 않게 자동화도 하고 진짜 정말 편리한 도구구나 싶었던 진짜 좋은 명강의 였고 … 저도 그렇게 해보고 싶은 마음이 많이 생겨났습니다.</p><figcaption>— 전○○ 님 · 2026년 6월 무료 특강</figcaption></figure>
+      <figure class="review"><p>키워드 수집부터 원고 생성, 예약 발행까지 이어지는 체계적인 흐름과 디자인 요소까지 갖춘 결과물에 감탄했습니다. 무엇보다 직접 구현해볼 수 있다는 점에서 큰 동기부여를 얻은 값진 시간이었습니다.</p><figcaption>— 최○○ 님 · 2026년 6월 무료 특강</figcaption></figure>
+      <figure class="review"><p>보면서도 하나 하나 따라 하려면 넘 어렵겠다 싶었는데 강사님의 시연을 보고 의외로 따라하다보면 나두 할 수 있겠다는 생각이 들었습니다.</p><figcaption>— 박○○ 님 · 2026년 6월 무료 특강</figcaption></figure>
+      <figure class="review"><p>물고기를 잡는법을 차근차근 설명해주셔서 생각보다 어렵지 않았어요 … 단순한 자동화가 아니라 각 플랫폼 성격에 맞게 만들수 있다는 점이 인상적이었어요 중간에 따라가지 못한 부분도 있어서 좀 아쉽습니다.</p><figcaption>— 다○ 님(닉네임) · 2026년 6월 무료 특강</figcaption></figure>
+      <figure class="review"><p>최근에 자동화에 관심이 많아지면서 여러 강의를 들어보았는데 실질적으로는 좀 아쉬움이 남았던 차에 박형종 강사님의 강의는 뭔가 차별화 다양화된 것 같았습니다. 하면 되는데 왜 하지 않느냐는 말씀이 큰 자극이 되었고 당장 실행해야겠다는 결심을 하게 해주셨습니다.</p><figcaption>— 모○○ 님(닉네임) · 2026년 10월 무료 특강</figcaption></figure>
+      <figure class="review"><p>블로그 글쓰기뿐 아니라 키워드 관리, 이미지 활용, 전자책 제작까지 하나의 흐름으로 연결되는 점이 특히 인상적이었습니다. 복잡한 코딩을 몰라도 직접 활용할 수 있고, 바이브코딩까지 배울 수 있어 실용적인 강의였습니다.</p><figcaption>— O○○○ 님(닉네임) · 2026년 10월 무료 특강</figcaption></figure>
     </div>
+    <p class="review-note">무료 특강 참여자가 단톡방에 남긴 후기를 원문 그대로 옮겼습니다(줄인 곳은 … 표시). 후기를 남긴 분께 복습 자료를 선물로 드렸습니다.</p>
   </div>
 </section>
 
